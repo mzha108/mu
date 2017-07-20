@@ -193,7 +193,7 @@ body {
 }
 
 #experience {
-    top: 25vh;
+    top: 32vh;
     color: #3f3f3f;
     position: relative;
     width: 100%;
@@ -223,7 +223,7 @@ body {
 #contact {
     background: #3f3f3f;
     position: relative;
-    top: 5em;
+    top: 20vh;
     width: 100%;
     color: #fff;
     text-align: center;
