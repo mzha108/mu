@@ -127,14 +127,14 @@ body {
 .image-bg {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
 }
 
 #first-image {
     position: absolute;
     width: 100%;
-    height: 170%;
+    height: 150%;
     background-image: url(../image/photo_2.jpg);
     background-size: cover;
 }
@@ -149,7 +149,7 @@ body {
 }
 
 #about {
-    top: 15vh;
+    top: 20vh;
     background: #3f3f3f;
     opacity: 0.8;
     position: relative;
@@ -174,7 +174,7 @@ body {
     position: relative; 
     color: #fff;
     width: 100%;
-    height: 80vh;
+    height: 100%;
     top: 40vh;
     background: #3f3f3f;
 }
@@ -246,7 +246,7 @@ body {
 
 /* ============= media =================*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     
     #navListItem {
         position: absolute;
@@ -361,24 +361,25 @@ body {
     position: relative; 
     color: #fff;
     width: 100%;
-    height: 55vh;
+    height: 100%;
     top: 40vh;
     background: #3f3f3f;
 }
 
 
 #experience {
-    top: 35vh;
+    top: 32vh;
     color: #3f3f3f;
     position: relative;
     width: 100%;
     animation-delay: 0.5s;
+    background-color: #e4e4e4;
 }
 
 #contact {
     background: #3f3f3f;
     position: relative;
-    top: 10em;
+    top: 25vh;
     width: 100%;
     color: #fff;
     text-align: center;
@@ -393,15 +394,6 @@ body {
 
     #first-image {
         background-attachment: fixed;
-    }
-    #second-image {
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position: 70% -27%;
-        background-size: 200%;
-    }
-    .container {
-        padding-top: 15%;
     }
 
 .subTitle {
@@ -433,372 +425,3 @@ body {
 
 }
 
-
-
-/*=============== ORIENTATION =====================*/ 
-@media (max-width: 768px) and (orientation: landscape){
-    
-    #navListItem {
-        position: absolute;
-        top: 2.97em;
-        right: 0;
-        background: #ececec;
-        clip-path: circle(0% at top right);
-        opacity: 0;
-        transition: all 1s;
-    }
-    
-    .navListItem_open {
-        opacity: 1 !important;
-        clip-path: circle(150% at top right) !important;
-    }
-    
-    #navListItem li {
-        display: block;
-        padding: 0;
-        margin: 0;
-        border-bottom: 1px solid #3f3f3f;
-    }
-    
-    #navListItem li a:hover,
-    #navListItem li a:focus {
-        background: #ff8400;
-        color: #3f3f3f;
-    }
-    
-    #navListItem a:hover::after,
-    #navListItem a:focus::after {
-        content: '';
-        left: 0;
-        width: 0;
-        
-    }
-    
-    #navListItem li:last-child {
-        border-bottom: none;
-    }
-    
-    #navListItem li:first-child {
-        border-top: 1px solid #3f3f3f;
-    }
-    
-    #navListItem li a {
-        display: block;
-        padding: 1em 4em;
-    }
-    
-    #toggleMenu {
-        display: block;
-        position: absolute;
-        top: 0.4em;
-        right: 0;
-        padding: 1em;
-        cursor: pointer;
-    }
-    
-    .hamburger,
-    .hamburger::before,
-    .hamburger::after{
-        content: '';
-        display: block;
-        width: 1.4em;
-        height: 3px;
-        border-radius: 3px;
-        background: #3f3f3f;
-        transition: all 0.3s;
-    }
-    
-    .hamburger::before {
-        transform: translateY(-6px);
-    }
-    .hamburger::after {
-        transform: translateY(3px);
-    }
-    
-    .toggleMenu_open .hamburger::before {
-        opacity: 0;
-    }
-    .toggleMenu_open .hamburger {
-        transform: rotate(45deg);
-        background: #ff8400;
-    }
-    .toggleMenu_open .hamburger::after {
-        transform: rotate(-90deg) translateY(-0.3px) translateX(2.7px);
-        background: #ff8400;
-    }
-    .sectionTitle {
-    text-align: center;
-    font-size: 1.5em;
-    margin: 0.5em auto 0 auto;
-    word-spacing: 0.2em;
-    font-family: "Pacifico";
-}
-
-#about p {
-    color: #fff;
-    font-family: "Pacifico";
-    font-size: 1em;
-    line-height: 1.4em;
-    word-spacing: 5px;
-    text-align: center;
-    max-width: 1200px;
-    margin: 1.3em auto;
-    animation-delay: 1s;
-    padding: 0;
-}
-
-#abilities {
-    position: relative; 
-    color: #fff;
-    width: 100%;
-    height: 100vh;
-    top: 10vh;
-    background: #3f3f3f;
-}
-
-
-#experience {
-    top: -10vh;
-    color: #3f3f3f;
-    position: relative;
-    width: 100%;
-    animation-delay: 0.5s;
-}
-
-#contact {
-    background: #3f3f3f;
-    position: relative;
-    top: 0em;
-    width: 100%;
-    color: #fff;
-    text-align: center;
-}
-
-
-.subTitle {
-    text-align: center;
-    font-weight: normal;
-    font-style: normal;
-    margin: 0em auto -1em auto;
-    padding-top: 0em;
-    padding-bottom: 2em;
-    font-size: 0.7em;
-    font-family: "Open Sans";
-    text-transform: uppercase;
-}
-
-    .image-bg {
-    position: absolute;
-    width: 100%;
-    height: 80vh;
-    z-index: -1;
-}
-
-    #first-image {
-        background-attachment: fixed;
-        height: 190%;
-    }
-    #second-image {
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position: 70% -27%;
-        background-size: 200%;
-    }
-    .container {
-        padding-top: 15%;
-    }
-
-    .sectionWrap {
-        flex-wrap: wrap;
-        
-    }
-    #second-image {
-        display: none;
-    }
-    #tester, #technician, #InternUras, #InternEY {
-        width: 100%;
-        text-align: center;
-    }
-    .footerP {
-        width: 100%;
-        padding-bottom: 1em;
-    }
-
-}
-
-
-
-
-
-/*================= 768 and 1024 ===================*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    #about p {
-    color: #fff;
-    font-family: "Pacifico";
-    font-size: 1.5em;
-    line-height: 1.4em;
-    word-spacing: 5px;
-    text-align: center;
-    max-width: 1200px;
-    margin: 1.3em auto;
-    animation-delay: 1s;
-    padding: 0;
-}
-    #abilities {
-    position: relative; 
-    color: #fff;
-    width: 100%;
-    height: 50vh;
-    top: 35vh;
-    background: #3f3f3f;
-}
-
-#experience {
-    top: 25vh;
-    color: #3f3f3f;
-    position: relative;
-    width: 100%;
-    animation-delay: 0.5s;
-}
-
-#contact {
-    background: #3f3f3f;
-    position: relative;
-    width: 100%;
-    color: #fff;
-    text-align: center;
-    top: 15vh;
-}
-    #first-image {
-        background-attachment: fixed;
-    }
-
-    #second-image {
-        display: none;
-    }
-    .image-bg {
-    position: absolute;
-    width: 100%;
-    height: 70vh;
-    z-index: -1;
-}
-
-}
-
-
-
-
-/*================ 1024 and orientation ================*/
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
-    #about p {
-    color: #fff;
-    font-family: "Pacifico";
-    font-size: 1.5em;
-    line-height: 1.4em;
-    word-spacing: 5px;
-    text-align: center;
-    max-width: 1200px;
-    margin: 1.3em auto;
-    animation-delay: 1s;
-    padding: 0;
-}
-    #abilities {
-    position: relative; 
-    color: #fff;
-    width: 100%;
-    height: 90vh;
-    top: 35vh;
-    background: #3f3f3f;
-}
-
-#experience {
-    top: 25vh;
-    color: #3f3f3f;
-    position: relative;
-    width: 100%;
-    animation-delay: 0.5s;
-}
-
-#contact {
-    background: #3f3f3f;
-    position: relative;
-    width: 100%;
-    color: #fff;
-    text-align: center;
-}
-    #first-image {
-        background-attachment: fixed;
-    }
-
-    #second-image {
-        display: none;
-    }
-    .image-bg {
-    position: absolute;
-    width: 100%;
-    height: 70vh;
-    z-index: -1;
-}
-
-}
-
-
-
-/*==================== 1024 and 1080 =====================*/
-
-@media (min-width: 1024px) and (max-width: 1080px) {
-    #about p {
-    color: #fff;
-    font-family: "Pacifico";
-    font-size: 1.5em;
-    line-height: 1.4em;
-    word-spacing: 5px;
-    text-align: center;
-    max-width: 1200px;
-    margin: 1.3em auto;
-    animation-delay: 1s;
-    padding: 0;
-}
-    #abilities {
-    position: relative; 
-    color: #fff;
-    width: 100%;
-    height: 35vh;
-    top: 35vh;
-    background: #3f3f3f;
-}
-
-#experience {
-    top: 30vh;
-    color: #3f3f3f;
-    position: relative;
-    width: 100%;
-    animation-delay: 0.5s;
-}
-
-#contact {
-    top: 25vh;
-    background: #3f3f3f;
-    position: relative;
-    width: 100%;
-    color: #fff;
-    text-align: center;
-}
-    #first-image {
-        background-attachment: fixed;
-        height: 110%;
-    }
-
-    #second-image {
-        display: none;
-    }
-    .image-bg {
-    position: absolute;
-    width: 100%;
-    height: 70vh;
-    z-index: -1;
-}
-
-}
