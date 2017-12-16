@@ -8,35 +8,35 @@ $(document).ready(function () {
 
 // smooth scroll
     $('#navLogo').click(function() {
-		$('body').animate({
+		$('html, body').animate({
 			scrollTop: $('#firstAnchor').offset().top
 		}, 1000);
 		return false;
 	});
 
     $('#link1').click(function() {
-		$('body').animate({
-			scrollTop: $('#firstAnchor').offset().top
+		$('html, body').animate({
+			scrollTop: $("#firstAnchor").offset().top
 		}, 1000);
 		return false;
 	});
 
 	$('#link2').click(function() {
-		$('body').animate({
+		$('html, body').animate({
 			scrollTop: $('#abilities').offset().top - 60
 		}, 1000);
 		return false;
 	});
 
     $('#link3').click(function() {
-		$('body').animate({
-			scrollTop: $('#experience').offset().top
+		$('html, body').animate({
+			scrollTop: $('#experience').offset().top - 60
 		}, 1000);
 		return false;
 	});
 
 	$('#link4').click(function() {
-		$('body').animate({
+		$('html, body').animate({
 			scrollTop: $('#contact').offset().top
 		}, 1000);
 		return false;
@@ -60,16 +60,19 @@ $(document).ready(function () {
 
 
 //parallax background image
-	$(window).scroll(function() {
-		/* Act on the event */
-		var top = $(this).scrollTop();
-		$('#first-image').css('top', -(top * 0.3) + 'px');
-	});
-	
-	$(window).scroll(function() {
-		/* Act on the event */
-		var top = $(this).scrollTop();
-		$('#second-image').css('top', (top * 0.15) + 'px');
-	});
+	if(!(window.matchMedia('(max-width: 1024px)').matches)) {
+		console.log(window.matchMedia('(max-width: 1024px)').matches);
+		$(window).scroll(function() {
+			/* Act on the event */
+			var top = $(this).scrollTop();
+			$('#first-image').css('top', -(top * 0.3) + 'px');
+		});
+		
+		$(window).scroll(function() {
+			/* Act on the event */
+			var top = $(this).scrollTop();
+			$('#second-image').css('top', (top * 0.15) + 'px');
+		});
+	}
 
 })

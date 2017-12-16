@@ -1,0 +1,804 @@
+
+/* =============== global =================*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300i,400');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #e4e4e4;
+    font-family: "Open Sans";
+    font-size: 20px;
+}
+
+.surname {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ff8400;
+}
+
+.navContainer {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.container {
+    padding-top: 10%;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 1em auto 0 auto;
+    word-spacing: 0.2em;
+    font-family: "Pacifico";
+}
+
+.subTitle {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0em auto -1em auto;
+    padding-top: 3em;
+    padding-bottom: 2em;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+}
+
+
+/* ================ special ================= */
+
+#navSection {
+    background: #e0e0e0;
+    padding: 0.8em 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#navSection:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+#navLogo {
+    text-decoration: none;
+    color: #3f3f3f;
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+}
+
+#navListItem {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    float: right;
+    height: auto;
+}
+
+#navListItem ul{
+    margin: 0;
+    padding: 0;
+}
+
+#navListItem li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 1.3em;
+}
+
+#navListItem li a {
+    text-decoration: none;
+    color: #3f3f3f;
+    transition: color 0.2s;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+#navListItem li:last-child {
+    margin-right: 0;
+}
+
+#navListItem a:after {
+    content: '';
+    position: relative;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff8400;
+    transition: all 0.2s;
+    top: 3px;
+}
+
+
+#toggleMenu {
+    display: none;
+}
+
+.image-bg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+#first-image {
+    position: absolute;
+    width: 100%;
+    height: 170%;
+    background-image: url(../image/photo_2.jpg);
+    background-size: cover;
+}
+
+#second-image {
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    background-image: url(../image/photo_3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#about {
+    top: 15vh;
+    background: #3f3f3f;
+    opacity: 0.8;
+    position: relative;
+    width: 100%;
+    animation-delay: 0.5s;
+}
+
+#about p {
+    color: #fff;
+    font-family: "Pacifico";
+    font-size: 2em;
+    line-height: 1.4em;
+    word-spacing: 5px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 1.3em auto;
+    animation-delay: 1s;
+    padding: 0;
+}
+
+#abilities {
+    position: relative; 
+    color: #fff;
+    width: 100%;
+    height: 80vh;
+    top: 40vh;
+    background: #3f3f3f;
+}
+
+.sectionWrap {
+    margin: 2em auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#abilities div img {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+}
+
+#experience {
+    top: 25vh;
+    color: #3f3f3f;
+    position: relative;
+    width: 100%;
+    animation-delay: 0.5s;
+}
+
+#tester, #technician, #InternUras, #InternEY {
+    width: 40%;
+    text-align: center;
+}
+
+.company {
+    font-weight: bold;
+}
+
+.date {
+    font-size: 14px;
+    padding-bottom: 0.5em;
+    font-style: italic;
+}
+
+.duty {
+    font-size: 14px;
+    text-align: center;
+}
+
+#contact {
+    background: #3f3f3f;
+    position: relative;
+    top: 5em;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.footerP {
+    padding-bottom: 5em;
+}
+
+#footer {
+    margin: 0;
+    padding: 0;
+    font-size:10px;
+    position: absolute;
+    text-align: center;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ============= media =================*/
+
+@media screen and (max-width: 768px) {
+    
+    #navListItem {
+        position: absolute;
+        top: 2.97em;
+        right: 0;
+        background: #ececec;
+        clip-path: circle(0% at top right);
+        opacity: 0;
+        transition: all 1s;
+    }
+    
+    .navListItem_open {
+        opacity: 1 !important;
+        clip-path: circle(150% at top right) !important;
+    }
+    
+    #navListItem li {
+        display: block;
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid #3f3f3f;
+    }
+    
+    #navListItem li a:hover,
+    #navListItem li a:focus {
+        background: #ff8400;
+        color: #3f3f3f;
+    }
+    
+    #navListItem a:hover::after,
+    #navListItem a:focus::after {
+        content: '';
+        left: 0;
+        width: 0;
+        
+    }
+    
+    #navListItem li:last-child {
+        border-bottom: none;
+    }
+    
+    #navListItem li:first-child {
+        border-top: 1px solid #3f3f3f;
+    }
+    
+    #navListItem li a {
+        display: block;
+        padding: 1em 4em;
+    }
+    
+    #toggleMenu {
+        display: block;
+        position: absolute;
+        top: 0.4em;
+        right: 0;
+        padding: 1em;
+        cursor: pointer;
+    }
+    
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after{
+        content: '';
+        display: block;
+        width: 1.4em;
+        height: 3px;
+        border-radius: 3px;
+        background: #3f3f3f;
+        transition: all 0.3s;
+    }
+    
+    .hamburger::before {
+        transform: translateY(-6px);
+    }
+    .hamburger::after {
+        transform: translateY(3px);
+    }
+    
+    .toggleMenu_open .hamburger::before {
+        opacity: 0;
+    }
+    .toggleMenu_open .hamburger {
+        transform: rotate(45deg);
+        background: #ff8400;
+    }
+    .toggleMenu_open .hamburger::after {
+        transform: rotate(-90deg) translateY(-0.3px) translateX(2.7px);
+        background: #ff8400;
+    }
+    .sectionTitle {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0.5em auto 0 auto;
+    word-spacing: 0.2em;
+    font-family: "Pacifico";
+}
+
+#about p {
+    color: #fff;
+    font-family: "Pacifico";
+    font-size: 1em;
+    line-height: 1.4em;
+    word-spacing: 5px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 1.3em auto;
+    animation-delay: 1s;
+    padding: 0;
+}
+
+#abilities {
+    position: relative; 
+    color: #fff;
+    width: 100%;
+    height: 55vh;
+    top: 40vh;
+    background: #3f3f3f;
+}
+
+
+#experience {
+    top: 35vh;
+    color: #3f3f3f;
+    position: relative;
+    width: 100%;
+    animation-delay: 0.5s;
+}
+
+#contact {
+    background: #3f3f3f;
+    position: relative;
+    top: 10em;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+    .image-bg {
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    z-index: -1;
+}
+
+    #first-image {
+        background-attachment: fixed;
+    }
+    #second-image {
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: 70% -27%;
+        background-size: 200%;
+    }
+    .container {
+        padding-top: 15%;
+    }
+
+.subTitle {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0em auto -1em auto;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+}
+
+    .sectionWrap {
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    #second-image {
+        display: none;
+    }
+    #tester, #technician, #InternUras, #InternEY {
+        width: 100%;
+        text-align: center;
+    }
+    .footerP {
+        width: 100%;
+        padding-bottom: 1em;
+    }
+
+}
+
+
+
+/*=============== ORIENTATION =====================*/ 
+@media (max-width: 768px) and (orientation: landscape){
+    
+    #navListItem {
+        position: absolute;
+        top: 2.97em;
+        right: 0;
+        background: #ececec;
+        clip-path: circle(0% at top right);
+        opacity: 0;
+        transition: all 1s;
+    }
+    
+    .navListItem_open {
+        opacity: 1 !important;
+        clip-path: circle(150% at top right) !important;
+    }
+    
+    #navListItem li {
+        display: block;
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid #3f3f3f;
+    }
+    
+    #navListItem li a:hover,
+    #navListItem li a:focus {
+        background: #ff8400;
+        color: #3f3f3f;
+    }
+    
+    #navListItem a:hover::after,
+    #navListItem a:focus::after {
+        content: '';
+        left: 0;
+        width: 0;
+        
+    }
+    
+    #navListItem li:last-child {
+        border-bottom: none;
+    }
+    
+    #navListItem li:first-child {
+        border-top: 1px solid #3f3f3f;
+    }
+    
+    #navListItem li a {
+        display: block;
+        padding: 1em 4em;
+    }
+    
+    #toggleMenu {
+        display: block;
+        position: absolute;
+        top: 0.4em;
+        right: 0;
+        padding: 1em;
+        cursor: pointer;
+    }
+    
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after{
+        content: '';
+        display: block;
+        width: 1.4em;
+        height: 3px;
+        border-radius: 3px;
+        background: #3f3f3f;
+        transition: all 0.3s;
+    }
+    
+    .hamburger::before {
+        transform: translateY(-6px);
+    }
+    .hamburger::after {
+        transform: translateY(3px);
+    }
+    
+    .toggleMenu_open .hamburger::before {
+        opacity: 0;
+    }
+    .toggleMenu_open .hamburger {
+        transform: rotate(45deg);
+        background: #ff8400;
+    }
+    .toggleMenu_open .hamburger::after {
+        transform: rotate(-90deg) translateY(-0.3px) translateX(2.7px);
+        background: #ff8400;
+    }
+    .sectionTitle {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0.5em auto 0 auto;
+    word-spacing: 0.2em;
+    font-family: "Pacifico";
+}
+
+#about p {
+    color: #fff;
+    font-family: "Pacifico";
+    font-size: 1em;
+    line-height: 1.4em;
+    word-spacing: 5px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 1.3em auto;
+    animation-delay: 1s;
+    padding: 0;
+}
+
+#abilities {
+    position: relative; 
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    top: 10vh;
+    background: #3f3f3f;
+}
+
+
+#experience {
+    top: -10vh;
+    color: #3f3f3f;
+    position: relative;
+    width: 100%;
+    animation-delay: 0.5s;
+}
+
+#contact {
+    background: #3f3f3f;
+    position: relative;
+    top: 0em;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+
+.subTitle {
+    text-align: center;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0em auto -1em auto;
+    padding-top: 0em;
+    padding-bottom: 2em;
+    font-size: 0.7em;
+    font-family: "Open Sans";
+    text-transform: uppercase;
+}
+
+    .image-bg {
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    z-index: -1;
+}
+
+    #first-image {
+        background-attachment: fixed;
+        height: 190%;
+    }
+    #second-image {
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: 70% -27%;
+        background-size: 200%;
+    }
+    .container {
+        padding-top: 15%;
+    }
+
+    .sectionWrap {
+        flex-wrap: wrap;
+        
+    }
+    #second-image {
+        display: none;
+    }
+    #tester, #technician, #InternUras, #InternEY {
+        width: 100%;
+        text-align: center;
+    }
+    .footerP {
+        width: 100%;
+        padding-bottom: 1em;
+    }
+
+}
+
+
+
+
+
+/*================= 768 and 1024 ===================*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #about p {
+    color: #fff;
+    font-family: "Pacifico";
+    font-size: 1.5em;
+    line-height: 1.4em;
+    word-spacing: 5px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 1.3em auto;
+    animation-delay: 1s;
+    padding: 0;
+}
+    #abilities {
+    position: relative; 
+    color: #fff;
+    width: 100%;
+    height: 50vh;
+    top: 35vh;
+    background: #3f3f3f;
+}
+
+#experience {
+    top: 25vh;
+    color: #3f3f3f;
+    position: relative;
+    width: 100%;
+    animation-delay: 0.5s;
+}
+
+#contact {
+    background: #3f3f3f;
+    position: relative;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    top: 15vh;
+}
+    #first-image {
+        background-attachment: fixed;
+    }
+
+    #second-image {
+        display: none;
+    }
+    .image-bg {
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    z-index: -1;
+}
+
+}
+
+
+
+
+/*================ 1024 and orientation ================*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+    #about p {
+    color: #fff;
+    font-family: "Pacifico";
+    font-size: 1.5em;
+    line-height: 1.4em;
+    word-spacing: 5px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 1.3em auto;
+    animation-delay: 1s;
+    padding: 0;
+}
+    #abilities {
+    position: relative; 
+    color: #fff;
+    width: 100%;
+    height: 90vh;
+    top: 35vh;
+    background: #3f3f3f;
+}
+
+#experience {
+    top: 25vh;
+    color: #3f3f3f;
+    position: relative;
+    width: 100%;
+    animation-delay: 0.5s;
+}
+
+#contact {
+    background: #3f3f3f;
+    position: relative;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+    #first-image {
+        background-attachment: fixed;
+    }
+
+    #second-image {
+        display: none;
+    }
+    .image-bg {
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    z-index: -1;
+}
+
+}
+
+
+
+/*==================== 1024 and 1080 =====================*/
+
+@media (min-width: 1024px) and (max-width: 1080px){
+    #about p {
+    color: #fff;
+    font-family: "Pacifico";
+    font-size: 1.5em;
+    line-height: 1.4em;
+    word-spacing: 5px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 1.3em auto;
+    animation-delay: 1s;
+    padding: 0;
+}
+    #abilities {
+    position: relative; 
+    color: #fff;
+    width: 100%;
+    height: 35vh;
+    top: 35vh;
+    background: #3f3f3f;
+}
+
+#experience {
+    top: 30vh;
+    color: #3f3f3f;
+    position: relative;
+    width: 100%;
+    animation-delay: 0.5s;
+}
+
+#contact {
+    top: 25vh;
+    background: #3f3f3f;
+    position: relative;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+    #first-image {
+        background-attachment: fixed;
+        height: 110%;
+    }
+
+    #second-image {
+        display: none;
+    }
+    .image-bg {
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    z-index: -1;
+}
+
+}
